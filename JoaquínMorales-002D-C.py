@@ -22,6 +22,12 @@ def leer_opcion():
             else:
                 print ("La opción debe ser un número entre 1 y 6.")
 
+def validar_codigo(codigo):
+    if codigo.strip != "" and codigo 
+        return True
+    else:
+        return False
+
 def validar_nombre_plan(nombre_plan):
     if nombre_plan.strip != "":
         return True
@@ -71,6 +77,18 @@ def validar_cupos(cupos):
         return True
     else:
         return False
+    
+def cupos_tipos(tipo):
+
+def busqueda_precio(p_min, p_max):
+
+def buscar_codigo(codigo):
+
+def actualizar_precio(codigo, nuevo_precio):
+
+def eliminar_plan(codigo):
+
+
 
 def main():
     planes = {
@@ -95,6 +113,11 @@ def main():
         mostrar_menu()
         opc = leer_opcion()
         match opc:
+            case 1:
+
+                            
             case 6:
                 print ("Programa finalizado.")
                 break
+
+main()
