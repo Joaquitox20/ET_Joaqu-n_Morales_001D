@@ -152,7 +152,7 @@ def main():
                             else:
                                 print ("El valor ingresado debe ser mayor a 0.")
                                 continue
-                                busqueda_precio(p_min, p_max)
+                    busqueda_precio(p_min, p_max)
             case 3:
                 actualizar_precio()
             case 4:
