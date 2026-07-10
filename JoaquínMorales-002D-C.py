@@ -135,9 +135,10 @@ def main():
                         except ValueError:
                              print ("Debe ingresar valores enteros.")
                         else:
-                            if validar_precio == False:
+                            if validar_precio == True:
                                 break
                             else:
+                                print ("El valor ingresado debe ser mayor a 0.")
                                 continue
         
                     while True:
