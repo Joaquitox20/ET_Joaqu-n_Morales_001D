@@ -22,12 +22,6 @@ def leer_opcion():
             else:
                 print ("La opción debe ser un número entre 1 y 6.")
 
-def validar_codigo(codigo):
-    if codigo.strip != "" and codigo 
-        return True
-    else:
-        return False
-
 def validar_nombre_plan(nombre_plan):
     if nombre_plan.strip != "":
         return True
@@ -78,17 +72,36 @@ def validar_cupos(cupos):
     else:
         return False
     
-def cupos_tipos(tipo):
-
 def busqueda_precio(p_min, p_max):
-
-def buscar_codigo(codigo):
+    while True:
+        try:
+            p_min = int(input("Ingrese precio mínimo: "))
+        except ValueError:
+            print ("Debe ingresar valores enteros.")
+        else:
+            if validar_precio == True:
+                break
+            else:
+                print ("El valor ingresado debe ser mayor a 0.")
+                continue
+        
+    while True:
+        try:
+            p_max = int(input("Ingrese precio máximo: "))
+        except ValueError:
+            print ("Debe ingresar valores enteros.")
+        else:
+            if validar_precio == True:
+                break
+            else:
+                print ("El valor ingresado debe ser mayor a 0.")
+                continue
 
 def actualizar_precio(codigo, nuevo_precio):
-
-def eliminar_plan(codigo):
-
-
+    codigo = input("Ingrese código del plan: ")
+    nuevo_precio = int(input("Ingrese nuevo precio: "))
+    print ("El código no existe.")
+    print ("Desea actualizar otro precio (s/n)?: ")
 
 def main():
     planes = {
@@ -114,8 +127,46 @@ def main():
         opc = leer_opcion()
         match opc:
             case 1:
-
-                            
+                tipo = input("Ingrese el tipo de plan a consultar: ")
+            case 2:
+                    while True:
+                        try:
+                            p_min = int(input("Ingrese precio mínimo: "))
+                        except ValueError:
+                             print ("Debe ingresar valores enteros.")
+                        else:
+                            if validar_precio == False:
+                                break
+                            else:
+                                continue
+        
+                    while True:
+                        try:
+                            p_max = int(input("Ingrese precio máximo: "))
+                        except ValueError:
+                            print ("Debe ingresar valores enteros.")
+                        else:
+                            if validar_precio == True:
+                                break
+                            else:
+                                print ("El valor ingresado debe ser mayor a 0.")
+                                continue
+                                busqueda_precio(p_min, p_max)
+            case 3:
+                actualizar_precio()
+            case 4:
+                codigo = input("Ingrese código del plan: ")
+                nombre_plan = input("Ingrese nombre del plan: ")
+                tipo = input("Ingrese tipo (mensual/trimestral/anual): ")
+                duracion_meses = int(input("Ingrese duración (meses): "))
+                acceso_piscina = input("¿Incluye acceso a piscina? (s/n): ")
+                incluye_clases = input("¿Incluye clases grupales? (s/n): ")
+                horario = input("Ingrese horario: ")
+                precio = int(input("Ingrese precio: "))
+                cupos = int(input("Ingrese cupos: "))
+                print ("Plan agregado")
+            case 5:
+                input("Ingrese el plan a eliminar: ")        
             case 6:
                 print ("Programa finalizado.")
                 break
